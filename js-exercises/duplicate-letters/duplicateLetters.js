@@ -4,7 +4,7 @@ function duplicateLetters(...args) {
       (prev, curr) => {
         prev[curr] = (prev[curr] || 0) + 1; // eslint-disable-line no-param-reassign
         return prev;
-      }, {}) // eslint-disable-line function-paren-newline, comma-dangle
+      }, {}) // eslint-disable-line 
     ) // eslint-disable-line function-paren-newline, comma-dangle
   ) : false;
 }
