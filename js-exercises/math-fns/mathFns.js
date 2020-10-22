@@ -1,5 +1,9 @@
 function sqrt(number) {
-  return Math.sqrt(number);
+  for (let i = 0; i * i <= number; i += 1) {
+    if (i * i === number) {
+      return i;
+    }
+  }
 }
 
 function power(number, exponent) {
@@ -7,10 +11,10 @@ function power(number, exponent) {
 }
 
 function round(number) {
-  return Math.round(number);
+  return number.toFixed(0);
 }
 
-// Don't change the exported names.
+//Don't change the exported names.
 export {
   sqrt,
   power,
