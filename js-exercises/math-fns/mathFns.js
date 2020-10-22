@@ -12,7 +12,7 @@ function power(number, exponent) {
 }
 
 function round(number) {
-  return number.toFixed(0);
+  return Number(number.toFixed(0));
 }
 // Don't change the exported names.
 export {
