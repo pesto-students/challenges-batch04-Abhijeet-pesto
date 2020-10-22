@@ -1,5 +1,5 @@
-function flipArgs() {
-  return (...args) => args.reverse();
+function flipArgs(fn) {
+  return (...args) => fn(...args.reverse());
 }
 
 export { flipArgs };
