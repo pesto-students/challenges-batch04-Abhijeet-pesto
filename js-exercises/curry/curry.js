@@ -10,3 +10,5 @@ function curry(fn) {
 export {
   curry,
 };
+
+// Refrenced from https://javascript.info/currying-partials
