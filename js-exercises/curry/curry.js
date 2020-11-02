@@ -1,9 +1,9 @@
 function curry(fn) {
   return function curried(...args) {
     if (args.length >= fn.length) {
-      return fn.apply(this, args);
+      return fn(...args);
     }
-    return (...moreArgs) => curried.apply(this, args.concat(moreArgs));
+    return (...moreArgs) => curried(...args.concat(moreArgs));
   };
 }
 
