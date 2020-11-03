@@ -4,6 +4,12 @@ function sliceArray(array, sliceNum) {
 }
 
 function chunkArrayInGroups(array, chunkSize) {
+  if (!Array.isArray(array)) {
+    throw new Error(`Error: Expected array as 1st argument, got ${typeof (array)}`);
+  }
+  if (typeof (chunkSize) !== 'number') {
+    throw new Error(`Error: Expected number as 2nd argument, got ${typeof (chunkSize)}`);
+  }
   const outArray = [];
   let chunk;
   let remainingElements;
