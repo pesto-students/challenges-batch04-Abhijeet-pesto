@@ -15,7 +15,10 @@ class Cycled {
   }
 
   * [Symbol.iterator]() {
-    yield this.array[this._currentIndex];
+    for (let i = this._currentIndex; i <= this.array.length - 1; i += 1) {
+      yield this.array[i];
+    }
+    if (this._currentIndex) yield this.array[this._currentIndex - 1];
   }
 
   resetIndex() {
