@@ -7,12 +7,10 @@ function debounce(fn, timeInMs) {
     throw new Error(`Error: Debounce time should be a number, ${typeof (timeInMs)} was supplied.`);
   }
 
-  let timeout = setTimeout(() => fn(), timeInMs);
-  return () => {
-    if (timeout) {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => fn(), timeInMs);
-    }
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => fn.apply(this, args), timeInMs);
   };
 }
 
